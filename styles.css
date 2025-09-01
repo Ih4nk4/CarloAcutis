@@ -1,0 +1,268 @@
+/* --- Reset básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenedor principal para que el footer se quede abajo */
+main {
+  flex: 1;
+}
+
+/* --- Header --- */
+header {
+  background-color: yellow;
+  padding: 10px 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.imagenes-header {
+  display: flex;
+  gap: 10px; /* imágenes en fila */
+}
+
+.imagenes-header img {
+  width: 100px;
+  height: auto;
+}
+
+.texto-header h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  color: #12048b;
+}
+
+.texto-header h2 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  color: #686767;
+  font-size: larger;
+  margin-top: 10px;
+}
+
+/* --- Contenedor principal --- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main .contenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.reloj {
+  width: 180px;
+  max-width: 40vw;
+  height: auto;
+}
+
+.texto {
+  max-width: 500px;
+  width: 90%;
+}
+
+.bloque-texto {
+  margin-bottom: 60px;
+}
+
+.texto h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.texto p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* --- Botón Siguiente --- */
+.boton-siguiente-container {
+  margin-top: 20px;
+}
+
+.boton-siguiente {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #12048b;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-siguiente:hover {
+  background-color: #0e036e;
+  transform: scale(1.05);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: yellow;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.p-footer {
+  font-size: 18px;
+  color: black;
+  margin-right: 20px;
+}
+
+.footer-like {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* --- Cuadro de Likes --- */
+.heart-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100px;
+  height: 80px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.3s;
+}
+
+.heart-box:hover {
+  transform: scale(1.1);
+  border-color: #888;
+}
+
+.heart {
+  font-size: 28px;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.heart.liked {
+  color: red;
+  animation: pop 0.3s ease;
+}
+
+.count {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+/* --- Cuadro de Visitas --- */
+.visit-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 80px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.visit-label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: gray;
+}
+
+.visit-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#visit-count {
+  font-weight: bold;
+  font-size: 22px;
+  color: black;
+}
+
+/* --- MEDIA QUERIES para móviles --- */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  main .contenido {
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px 0;
+  }
+  .bloque-texto {
+    margin-bottom: 40px;
+  }
+  .texto h3 {
+    font-size: 1.1rem;
+  }
+  .texto p {
+    font-size: 0.9rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .p-footer {
+    font-size: 16px;
+    margin-right: 0;
+    text-align: center;
+  }
+  .footer-like {
+    gap: 15px;
+  }
+}

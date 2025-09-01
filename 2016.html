@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2016 - La Vida de Carlo Acutis</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="2016.css"> <!-- mismo CSS que la anterior página -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <div class="imagenes-header">
+        <img src="c.png" alt="Carlo Acutis 1">
+        <img src="ca.png" alt="Carlo Acutis 2">
+        <img src="car.png" alt="Carlo Acutis 3">
+        <img src="carlo.png" alt="Carlo Acutis 4">
+      </div>
+      <div class="texto-header">
+        <h1>La Vida de Carlo Acutis</h1>
+        <h2>En una línea de tiempo</h2>
+      </div>
+      <div class="boton-atras-container">
+        <a href="2013.html" class="boton-atras">← Atrás</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main>
+    <div class="imagen-texto">
+
+      <!-- BLOQUE IZQUIERDO -->
+      <div class="bloque-izquierdo">
+        <h3>Imagen</h3>
+        <img src="B.jpg" alt="Carlo estatua" class="img-izquierda">
+      </div>
+
+      <!-- RELOJ -->
+      <img src="reloj.png" alt="Reloj de arena" class="reloj">
+
+      <!-- BLOQUE DERECHO -->
+      <div class="texto">
+        <div class="bloque-texto">
+          <h3>2016: Reconociendo la vida ejemplar de Carlo Acutis</h3>
+          <p>El 24 de noviembre de 2016 se clausura oficialmente, en el Arzobispado de Milán y en presencia del Cardenal Angelo Scola, el proceso diocesano de la causa de beatificación y canonización del Siervo de Dios Carlo Acutis. La culminación de esta fase marca un paso decisivo en el reconocimiento de su vida ejemplar y sus virtudes cristianas, que ahora son evaluadas por la Congregación para las Causas de los Santos en Roma. Este momento permite a los fieles conocer con mayor profundidad su historia y difundir su legado de fe, generosidad y amor por la Eucaristía.</p>
+        </div>
+        <div class="boton-siguiente-container">
+          <a href="2018.html" class="boton-siguiente">Siguiente →</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="p-footer">Por: Acosta Isabel, Guinazú Mia, Kurylonok Ines, Romo Julia, Sanchez Yhanka, Villán Martina.</p>
+    <div class="footer-like">
+      <div id="like-button" class="heart-box">
+        <span class="heart">🤍</span>
+        <span id="like-count" class="count">0</span>
+      </div>
+      <div id="visit-box" class="visit-box">
+        <span class="visit-label">Visitas</span>
+        <div class="visit-row">
+          <span id="visit-count">0</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Botón de Likes
+      const likeButton = document.getElementById('like-button');
+      const heart = likeButton.querySelector('.heart');
+      const likeCount = likeButton.querySelector('.count');
+
+      let count = 0;
+      let liked = false;
+
+      likeButton.addEventListener('click', () => {
+        if (!liked) {
+          count++;
+          heart.textContent = '❤️';
+          heart.classList.add('liked');
+          liked = true;
+        } else {
+          count--;
+          heart.textContent = '🤍';
+          heart.classList.remove('liked');
+          liked = false;
+        }
+        likeCount.textContent = count;
+      });
+
+      // Contador de visitas
+      const visitCount = document.getElementById('visit-count');
+      let visits = parseInt(localStorage.getItem('visits') || '0');
+      visits++;
+      localStorage.setItem('visits', visits);
+      visitCount.textContent = visits;
+    });
+  </script>
+
+</body>
+</html>

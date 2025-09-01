@@ -1,0 +1,217 @@
+/* ==== Estilos específicos para 1991.html ==== */
+
+/* HEADER */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: yellow;
+  padding: 10px 20px;
+}
+
+.imagenes-header {
+  display: flex;
+  gap: 10px;
+}
+
+.imagenes-header img {
+  width: 100px;
+  height: auto;
+}
+
+.texto-header h1 {
+  font-family: "Archivo Black", sans-serif;
+  color: #12048b;
+  margin: 0;
+}
+
+.texto-header h2 {
+  font-family: "Archivo Black", sans-serif;
+  color: #686767;
+  margin: 0;
+  font-size: larger;
+}
+
+/* Botón Atrás */
+.boton-atras-container {
+  margin-left: auto;
+}
+
+.boton-atras {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #12048b;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-atras:hover {
+  background-color: #0e036e;
+  transform: scale(1.05);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.imagen-texto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 50px;
+}
+
+/* BLOQUE IZQUIERDO */
+.bloque-izquierdo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.bloque-izquierdo h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Primera imagen debajo del subtítulo más grande */
+.bloque-izquierdo img:first-of-type {
+  width: 250px;
+  height: auto;
+}
+
+.img-izquierda {
+  width: 150px;
+  height: auto;
+}
+
+.bloque-izquierdo p {
+  text-align: center;
+  max-width: 200px;
+  color: #ffffff;
+}
+
+/* RELOJ */
+.reloj {
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+}
+
+/* BLOQUE DERECHO */
+.texto .bloque-texto {
+  margin-bottom: 35px; /* separación extra entre párrafos */
+}
+
+.texto h3 {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.texto p {
+  color: white;
+  line-height: 1.5;
+}
+
+/* Botón Siguiente */
+.boton-siguiente-container {
+  margin-top: 25px;
+}
+
+.boton-siguiente {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #12048b;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-siguiente:hover {
+  background-color: #0e036e;
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* baja los elementos hacia abajo */
+  padding: 20px;
+}
+
+.p-footer {
+  margin: 0;
+  margin-left: 10px;  /* pegado a la izquierda */
+  font-size: 18px;
+  color: black;
+}
+
+.footer-like {
+  display: flex;
+  align-items: flex-end; /* alinea cuadros con el texto */
+  gap: 25px;
+}
+
+.heart-box,
+.visit-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100px;
+  height: 80px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.heart {
+  font-size: 28px;
+  transition: color 0.3s;
+}
+
+.heart.liked {
+  color: red;
+}
+
+.count {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+.visit-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: gray; /* texto VISITAS en gris */
+}
+
+#visit-count {
+  font-weight: bold;
+  font-size: 22px;
+  color: black;
+}
+
+/* ==== EFECTOS PARA LA IMAGEN PRINCIPAL ==== */
+.img-izquierda {
+  width: 250px;   /* tamaño más grande */
+  height: auto;
+  border: 5px solid yellow;       /* borde decorativo */
+  border-radius: 15px;            /* esquinas redondeadas */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6); /* sombra elegante */
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.img-izquierda:hover {
+  transform: scale(1.1);           /* zoom al pasar el mouse */
+  filter: brightness(1.2);         /* un poco más brillante */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.8); /* sombra más fuerte */
+}
